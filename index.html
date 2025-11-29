@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Anahat ve Değişiklik Yönetimi Testi</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    margin: 30px auto;
+    line-height: 1.6;
+  }
+  #finishBtn {
+    display: block;
+    width: 100%;
+    font-size: 22px;
+    padding: 15px;
+    margin: 30px 0;
+    cursor: pointer;
+  }
+  .question {
+    margin-bottom: 20px;
+  }
+  .correct-option {
+    background-color: #c9f7c2 !important;
+  }
+  #result {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: darkblue;
+  }
+</style>
+</head>
+<body>
+
+<!-- TEST DOĞRUDAN GÖRÜNECEK -->
+<form id="testSection">
+  <h2>Anahat – Test</h2>
+
+  <div class="question">
+    1) Anahatlar neyi ifade eder?<br>
+    <label><input type="radio" name="q1" value="w"> Ürünün tasarım detaylarını</label><br>
+    <label><input type="radio" name="q1" value="w"> Ürünen üretim ve test aşamalarını</label><br>
+    <label><input type="radio" name="q1" value="w"> Ürünün çeşitliliğini</label><br>
+    <label><input type="radio" name="q1" value="c"> Ürünün yaşam döngüsündeki olgunluk seviyelerini</label><br>
+    <label><input type="radio" name="q1" value="w"> Ürün ağaçlarındaki bileşenlerin arayüzlerini</label>
+  </div>
+
+  <div class="question">
+    2) Anahatlar Konfigürason Yönetiminin hangi adımında tanımlanır?<br>
+    <label><input type="radio" name="q2" value="w"> Konfigürasyon Planlama</label><br>
+    <label><input type="radio" name="q2" value="c"> Konfigürasyon Tanımlama</label><br>
+    <label><input type="radio" name="q2" value="w"> Konfigürasyon Kontrol</label><br>
+    <label><input type="radio" name="q2" value="w"> Konfigürasyon Durum Takibi</label><br>
+    <label><input type="radio" name="q2" value="w"> Konfigürasyon Tetkikleri</label>
+  </div>
+
+  <div class="question">
+    3) Değişiklikler hangi sırayla uygulanmalıdır?<br>
+    <label><input type="radio" name="q3" value="w"> Önce ürünlere sonra dokümanlara</label><br>
+    <label><input type="radio" name="q3" value="c"> Önce dokümanlara sonra ürünlere</label><br>
+    <label><input type="radio" name="q3" value="w"> Önce üretime sonra müşteriye</label><br>
+    <label><input type="radio" name="q3" value="w"> Sadece ürüne uygulanır</label><br>
+    <label><input type="radio" name="q3" value="w"> Sıra fark etmez</label>
+  </div>
+
+  <div class="question">
+    4) Devre kartındaki direnç değeri değiştirilip doküman güncellenmezse ne olur?<br>
+    <label><input type="radio" name="q4" value="w"> Ürün garanti süresi uzar</label><br>
+    <label><input type="radio" name="q4" value="w"> Herhangi bir soruna yol açmaz</label><br>
+    <label><input type="radio" name="q4" value="c"> Üretim veya test hataları oluşabilir</label><br>
+    <label><input type="radio" name="q4" value="w"> Müşteri şikayetleri azalır</label><br>
+    <label><input type="radio" name="q4" value="w"> Ürün maliyeti artar</label>
+  </div>
+
+  <div class="question">
+    5) Yazılım değişikliğinden sonra doküman güncellenmezse risk nedir?<br>
+    <label><input type="radio" name="q5" value="w"> Yazılım daha hızlı çalışır</label><br>
+    <label><input type="radio" name="q5" value="c"> Kullanıcı eski bilgiyle hareket eder ve hata yapar</label><br>
+    <label><input type="radio" name="q5" value="w"> Proje daha yavaş ilerler</label><br>
+    <label><input type="radio" name="q5" value="w"> Testler otomatikleşmez</label><br>
+    <label><input type="radio" name="q5" value="w"> Sürüm notları silinir</label>
+  </div>
+
+  <div class="question">
+    6) Değişikliğin önce ürün üzerinde denenmesi gerektiğinde ne yapılabilir?<br>
+    <label><input type="radio" name="q6" value="c"> Kalite bildirim formu ile takip edilebilir</label><br>
+    <label><input type="radio" name="q6" value="w"> Sıfırdan ürün üretilebilir</label><br>
+    <label><input type="radio" name="q6" value="w"> Deneme sonuna kadar üretim durdurulabilir</label><br>
+    <label><input type="radio" name="q6" value="w"> Herhangi bir kayıta gerek yoktur</label><br>
+    <label><input type="radio" name="q6" value="w"> Değişiklik asla önce üründe denenmez</label>
+  </div>
+
+  <div class="question">
+    7) Anahatlar metinde hangi örneklerle verilmiştir?<br>
+    <label><input type="radio" name="q7" value="w"> Konsept, tasarım, test, üretim</label><br>
+    <label><input type="radio" name="q7" value="w"> Ön tasarım, detaylı tasarım, üretim, kullanım</label><br>
+    <label><input type="radio" name="q7" value="w"> Tasarım, üretim, kullanım, elden çıkarma</label><br>
+    <label><input type="radio" name="q7" value="c"> Konsept, tasarım, üretim ve kullanım</label><br>
+    <label><input type="radio" name="q7" value="w"> Tasarım, üretim, test, kullanım</label>
+  </div>
+
+  <div class="question">
+    8) Doküman güncellenmezse hangi ciddi risk oluşur?<br>
+    <label><input type="radio" name="q8" value="w"> Ürün süresi artar</label><br>
+    <label><input type="radio" name="q8" value="w"> Üretim testi eksik yapılır</label><br>
+    <label><input type="radio" name="q8" value="w"> Müşteri memnuniyeti azalır</label><br>
+    <label><input type="radio" name="q8" value="w"> Herhangi bir soruna yol açmaz</label><br>
+    <label><input type="radio" name="q8" value="c"> Konfigürasyon bütünlüğü bozulur</label>
+  </div>
+
+  <button id="finishBtn" type="button">Testi Bitir</button>
+</form>
+
+<div id="result"></div>
+
+<script>
+  document.getElementById("finishBtn").addEventListener("click", function() {
+    let correct = 0;
+    const total = 8;
+
+    for (let i = 1; i <= total; i++) {
+      const options = document.getElementsByName("q" + i);
+
+      for (const opt of options) {
+        opt.parentElement.classList.remove("correct-option");
+      }
+
+      for (const opt of options) {
+        if (opt.value === "c") {
+          opt.parentElement.classList.add("correct-option");
+          if (opt.checked) correct++;
+        }
+      }
+    }
+
+    document.getElementById("result").innerHTML =
+      "Doğru: " + correct + "<br>" +
+      "Yanlış: " + (total - correct) + "<br>" +
+      "Başarı: %" + Math.round((correct / total) * 100);
+  });
+</script>
+
+</body>
+</html>
